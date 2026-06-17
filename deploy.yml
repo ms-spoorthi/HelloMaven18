@@ -1,0 +1,13 @@
+---
+- hosts: servers
+  tasks:
+
+  - name: Create deployment folder
+    file:
+      path: C:/deploy
+      state: directory
+
+  - name: Copy JAR file
+    copy:
+      src: target/HelloMaven18-1.0-SNAPSHOT.jar
+      dest: C:/deploy/
